@@ -1,0 +1,15 @@
+57. Non-overlapping Intervals
+https://leetcode.com/problems/non-overlapping-intervals/
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        if not intervals:
+            return 0
+        removed = 0
+        intervals.sort(key=lambda x:x[1])
+        previous_right=intervals[0][1]
+        for interval in intervals[1:]:
+            if interval[0]<previous_right:
+                removed+=1
+            else:
+                previous_right=interval[1]
+        return removed
