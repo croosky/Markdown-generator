@@ -17,5 +17,5 @@ For the example of input file check in.txt, for the result file check intervals.
 ## How to run
 
 ```
-generator.py your_input_name.txt your_output_name.md
+py generator.py your_input_name.txt your_output_name.md
 ```
